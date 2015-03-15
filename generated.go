@@ -18,7 +18,7 @@ func generated() {
 type Int int
 
 // One can just use the + operator here, but I'm making it
-// as comparable to the dynamically typed version 
+// as comparable to the version using reflection
 func (i Int) Add(j Int) Int {
 	return i + j
 }
