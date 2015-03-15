@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+dir=$1
+if [[ -z $dir ]]; then
+	dir=.
+fi
+pushd $dir &>/dev/null
+for i in `ls *.go.H`; do
+	name=`basename $i .H`
+	outfile="`basename $name .go`_gen.go"
+	ifile=".$name.goi"
+# Run the file through the C pre-proecssor and replace trailing ";" with
+# newlines
+	cc -E -P $i | sed -e $'s/;/\\\n/g' > $ifile
+	gofmt $ifile > $outfile
+	rm $ifile
+done
+popd &>/dev/null
