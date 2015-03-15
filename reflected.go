@@ -5,7 +5,7 @@ import "fmt"
 // Demo code using the definitions in reflect_cons.go
 // Notice the type conversions
 // Also the list is not type safe. One can even do
-// `lst = lst.Cons("imastring")` and the compiler
+// `lst = lst.Cons(Cons("imastring"))` and the compiler
 // wont complain and you will get a runtime panic
 func reflected() {
 	lst := Cons(1)
