@@ -1,3 +1,8 @@
+// The macro definitions for generating type specific code
+// Since the C preprocessor removes newline, we need to end every line with
+// ";\". The gopp script will replace the ";" with a newline.
+
+// The CONSTYPE macro enforces the type naming convention
 #define CONSTYPE(T) ConsP_##T
 
 #define MAKE_CONS(T) ;\

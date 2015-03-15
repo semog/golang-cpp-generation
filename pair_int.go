@@ -1,5 +1,8 @@
 package main
 
+// Implmentation of the Cons for int as a reference to implement
+// the macro version. The macro version is derived by substituting
+// the macro parameter T for int
 /*
 type ConsP_int struct {
 	car int

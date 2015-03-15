@@ -5,8 +5,8 @@ package main
 
 
 func main() {
-//	generic()
-//	generic_sum()
-//	generated()
+	generic()
+	generic_sum()
+	generated()
 	generated_sum()
 }
