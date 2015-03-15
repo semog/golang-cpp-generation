@@ -14,4 +14,3 @@ func generated_sum() {
 	fmt.Println(lst.Sum() + 1)
 }
 
-

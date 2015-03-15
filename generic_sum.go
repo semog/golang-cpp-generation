@@ -9,8 +9,8 @@ func (i Integer) Add(j Integer) Integer {
 }
 
 func generic_sum() {
-	lst := Cons(Int(1))
-	lst = lst.Cons(Cons(Int(2)))
-	fmt.Println(lst.Sum().(Int) + 1)
+	lst := Cons(Integer(1))
+	lst = lst.Cons(Cons(Integer(2)))
+	fmt.Println(lst.Sum().(Integer) + 1)
 }
 
